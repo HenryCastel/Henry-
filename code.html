@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;family=Inter:wght@400;500;600&amp;family=Work+Sans:wght@400;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-variant": "#e2e2e2",
+                        "secondary-fixed-dim": "#c6c6c6",
+                        "on-primary-fixed": "#231b00",
+                        "surface-dim": "#dadada",
+                        "tertiary-fixed-dim": "#c7c6c6",
+                        "on-tertiary-fixed-variant": "#464747",
+                        "inverse-surface": "#2f3131",
+                        "secondary-container": "#e2e2e2",
+                        "on-tertiary-fixed": "#1b1c1c",
+                        "on-surface-variant": "#4d4632",
+                        "surface-container-lowest": "#ffffff",
+                        "on-error": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "primary-container": "#ffd000",
+                        "on-secondary-container": "#646464",
+                        "primary-fixed-dim": "#ecc200",
+                        "outline-variant": "#d1c6ab",
+                        "on-surface": "#1a1c1c",
+                        "background": "#c3c4ca",
+                        "on-background": "#1a1c1c",
+                        "primary": "#725c00",
+                        "surface-bright": "#f9f9f9",
+                        "surface-container": "#eeeeee",
+                        "on-primary-fixed-variant": "#564500",
+                        "on-primary-container": "#705b00",
+                        "on-tertiary": "#ffffff",
+                        "surface": "#f9f9f9",
+                        "surface-container-highest": "#e2e2e2",
+                        "on-error-container": "#93000a",
+                        "surface-container-high": "#e8e8e8",
+                        "inverse-primary": "#ecc200",
+                        "error": "#ba1a1a",
+                        "outline": "#7f765f",
+                        "secondary-fixed": "#e2e2e2",
+                        "on-secondary-fixed": "#1b1b1b",
+                        "secondary": "#5e5e5e",
+                        "primary-fixed": "#ffe07c",
+                        "surface-container-low": "#f3f3f3",
+                        "tertiary": "#5e5e5e"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Inter"],
+                        "label": ["Work Sans"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        html { scroll-behavior: smooth; scroll-padding-top: 120px; }
+        body { font-family: 'Inter', sans-serif; background-color: #c3c4ca; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .text-shadow-hero { text-shadow: 0px 4px 10px rgba(0,0,0,0.4); }
+    </style>
+</head>
+<body class="bg-background text-on-surface">
+<!-- TopNavBar -->
+<nav class="fixed top-0 left-0 w-full z-50 h-[80px] md:h-[120px] bg-[#ffd000] flex justify-between items-center pr-4 md:pr-12 font-['Plus_Jakarta_Sans'] font-bold tracking-tight text-black shadow-md">
+<a href="#" class="h-full flex items-center justify-start py-2 md:py-0">
+    <img src="Logo_Pro.png" alt="Prosegur Alarmas Logo" class="h-full w-auto object-contain transition-transform hover:scale-105 duration-300">
+</a>
+<div class="hidden md:flex gap-8 items-center pl-6 md:pl-12">
+<a class="font-bold text-black/80 hover:text-black hover:border-b-2 hover:border-black pb-1 transition-all uppercase tracking-wide text-[13px]" href="#monitoreo">Beneficios</a>
+<a class="font-bold text-black/80 hover:text-black hover:border-b-2 hover:border-black pb-1 transition-all uppercase tracking-wide text-[13px]" href="#empresas">Cotizador</a>
+<a class="font-bold text-black/80 hover:text-black hover:border-b-2 hover:border-black pb-1 transition-all uppercase tracking-wide text-[13px]" href="#sistemas">Equipos 3D</a>
+<a class="font-bold text-black/80 hover:text-black hover:border-b-2 hover:border-black pb-1 transition-all uppercase tracking-wide text-[13px]" href="#protocolo">Protocolo</a>
+</div>
+<div class="flex items-center">
+<a href="https://wa.me/51942866377?text=Hola,%20quiero%20solicitar%20un%20presupuesto" target="_blank" class="bg-black text-white px-3 py-2 md:px-5 md:py-2.5 text-[10px] md:text-[13px] font-bold uppercase tracking-wider rounded-lg hover:scale-95 duration-200 ease-in-out inline-block text-center whitespace-nowrap">Solicitar <br class="md:hidden">Presupuesto</a>
+</div>
+</nav>
+<!-- Hero Section (Item 1) -->
+<section class="relative w-full h-[85vh] md:h-[921px] flex items-center overflow-hidden pt-[80px] md:pt-[120px]">
+<div class="absolute inset-0 z-0">
+<img alt="Fotografía de una familia feliz en la sala de estar transmitiendo paz y seguridad gracias a Prosegur" class="w-full h-full object-cover" src="Pg_Familia.jpg"/>
+<div class="absolute inset-0 bg-gradient-to-r from-black/60 via-black/30 to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+<div class="text-white space-y-6">
+<span class="font-label uppercase tracking-widest text-primary-container font-bold text-sm">Tu familia primero</span>
+<h1 class="font-headline text-5xl md:text-7xl font-extrabold leading-[1.1] tracking-tight text-shadow-hero">Protección para lo que más importa.</h1>
+<p class="text-lg md:text-xl text-white/90 max-w-lg font-body leading-relaxed text-shadow-hero">Sistemas de alarma inteligentes diseñados para cuidar de tu hogar las 24 horas del día. Disfruta de la tranquilidad que tú y los tuyos merecen.</p>
+<div class="flex flex-wrap gap-4 pt-4">
+<a href="https://wa.me/51942866377?text=Hola,%20me%20gustar%C3%ADa%20solicitar%20una%20cita%20con%20Prosegur" target="_blank" class="inline-block bg-primary-container text-on-primary-fixed px-8 py-4 rounded-xl font-bold text-sm uppercase tracking-wider hover:brightness-110 transition-all shadow-lg">Contactar por WhatsApp</a>
+<a href="https://www.youtube.com/watch?v=Ll_9zPpltfk&t=5s" target="_blank" class="border border-white/30 backdrop-blur-md bg-white/10 text-white px-8 py-4 rounded-xl font-bold text-sm uppercase tracking-wider hover:bg-white/20 transition-all shadow-lg relative overflow-hidden group flex items-center gap-2">Ver Demo <span class="material-symbols-outlined text-white/50 group-hover:text-white transition-colors text-sm">play_circle</span></a>
+</div>
+</div>
+<!-- Formulario / WhatsApp Template -->
+<div class="hidden md:block relative w-full max-w-md ml-auto -mt-[140px] md:-mt-[220px] xl:-mt-[260px]">
+    <div class="bg-[#0b0c10] rounded-[32px] p-8 shadow-2xl relative z-10 border border-white/10">
+        <h2 class="font-headline text-[34px] font-black tracking-tight mb-2 leading-none">
+            <span class="text-[#ffd000]">Cotiza gratis</span> <span class="text-white">tu alarma.</span>
+        </h2>
+        <h3 class="text-white text-xl font-bold mb-1">Déjanos tus datos:</h3>
+        <p class="text-white/80 text-sm mb-6 font-medium">Horario de atención: L-V de 8am a 8pm.</p>
+
+        <form class="space-y-4" onsubmit="event.preventDefault(); const n = document.getElementById('w-nombre').value; const c = document.getElementById('w-celular').value; const e = document.getElementById('w-email').value; window.open('https://wa.me/51942866377?text=Hola,%20quisiera%20cotizar%20mi%20alarma.%0A%0AMis%20datos%20son:%0ANombre:%20' + encodeURIComponent(n) + '%0ACelular:%20' + encodeURIComponent(c) + '%0AEmail:%20' + encodeURIComponent(e), '_blank')">
+            <input type="text" id="w-nombre" placeholder="Nombre *" class="w-full px-5 py-4 rounded-xl text-gray-900 bg-white border-0 outline-none focus:ring-4 focus:ring-[#ffd000] placeholder-gray-400 font-medium transition-all" required>
+            <input type="tel" id="w-celular" placeholder="Teléfono Celular *" class="w-full px-5 py-4 rounded-xl text-gray-900 bg-white border-0 outline-none focus:ring-4 focus:ring-[#ffd000] placeholder-gray-400 font-medium transition-all" required>
+            <input type="email" id="w-email" placeholder="Email *" class="w-full px-5 py-4 rounded-xl text-gray-900 bg-white border-0 outline-none focus:ring-4 focus:ring-[#ffd000] placeholder-gray-400 font-medium transition-all" required>
+            
+            <div class="flex items-start gap-3 py-2">
+                <input type="checkbox" id="privacy" class="mt-1 w-5 h-5 rounded focus:ring-[border] text-black bg-transparent border-white/50 cursor-pointer" required>
+                <label for="privacy" class="text-sm text-white/90 cursor-pointer">He leído y acepto la <a href="#" class="font-bold hover:underline">Política de privacidad</a></label>
+            </div>
+
+            <button type="submit" class="w-full flex items-center justify-center gap-2 bg-[#ffd000] text-black font-black text-xl py-4 rounded-[18px] hover:brightness-110 active:scale-95 transition-all mt-4 group">
+                <svg class="w-7 h-7 fill-current group-hover:scale-110 transition-transform" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
+                </svg>
+                Llámenme
+            </button>
+        </form>
+    </div>
+</div>
+</div>
+</section>
+<!-- Triple Security Section (Item 2) -->
+<section id="monitoreo" class="py-16 lg:py-20 bg-white">
+<div class="max-w-7xl mx-auto px-6 md:px-12 text-center">
+
+    <div class="max-w-4xl mx-auto space-y-3 mb-10 lg:mb-14">
+        <h2 class="font-headline text-4xl md:text-5xl font-extrabold text-on-surface leading-[1.15] mb-8">
+            ¿Buscas un sistema de alarma para casa? <br/>
+            <span class="text-[#ffd000] drop-shadow-sm">Acá la respuesta.</span>
+        </h2>
+        <p class="font-body text-xl md:text-2xl font-medium tracking-tight text-black">Tu prioridad y la nuestra es la seguridad de tu casa, y tu tranquilidad en todo momento.</p>
+        <p class="font-body text-xl md:text-2xl tracking-tight text-black">En Prosegur Alarmas, garantizamos tu protección con un <span class="font-bold">sistema integral de <span class="underline decoration-2 underline-offset-4 decoration-gray-400">alarmas antirrobo</span> <span class="font-bold">de triple seguridad.</span></span></p>
+    </div>
+
+    <!-- The Image grouping the 3 photos -->
+    <div class="mb-10 w-full max-w-6xl mx-auto">
+        <img alt="Triple seguridad con Monitoreo, Teclado Inteligente, y Sensores" class="w-full h-auto object-cover rounded-xl" src="TresImageses.png"/>
+    </div>
+
+    <!-- The 3 text columns grid -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto text-left">
+        <!-- Col 1 -->
+        <div class="space-y-4">
+            <h3 class="font-headline font-bold text-3xl text-black tracking-tight">1- Anti intrusión</h3>
+            <p class="text-gray-700 text-sm md:text-base leading-relaxed font-medium">Mediante sistemas de seguridad para casas de alta tecnología supervisada por un equipo de profesionales especializados en seguridad, nuestro sistema integral de alarmas se conecta con la CRA (Central Receptora de Alarmas), monitoreando y alertándote de posibles robos 24/7.</p>
+        </div>
+        <!-- Col 2 -->
+        <div class="space-y-4">
+            <h3 class="font-headline font-bold text-3xl text-black tracking-tight">2- Anti inhibición</h3>
+            <p class="text-gray-700 text-sm md:text-base leading-relaxed font-medium">Diseñados con lo último en tecnología, nuestro sistema de alarma integral de alarmas protege tu casa en todo momento ya que ante un intento de inhibición de la señal, automáticamente se pondrá en marcha la señal IP que continuará registrando la actividad.</p>
+        </div>
+        <!-- Col 3 -->
+        <div class="space-y-4">
+            <h3 class="font-headline font-bold text-3xl text-black tracking-tight">3- Anti sabotaje</h3>
+            <p class="text-gray-700 text-sm md:text-base leading-relaxed font-medium">En caso de cortes en el suministro de luz, este sistema activará la batería alimentando el sistema integral de alarmas para su correcto funcionamiento.</p>
+        </div>
+    </div>
+
+</div>
+</section>
+<!-- Quotation Wizard Section (Item 3) -->
+<section id="empresas" class="py-16 lg:py-24 relative overflow-hidden bg-[#111214] border-t border-white/5">
+    <!-- Elementos Creativos de Fondo -->
+    <div class="absolute inset-0 z-0 pointer-events-none">
+        <div class="absolute -top-[30%] -right-[10%] w-[60%] h-[60%] bg-[#ffd000]/15 blur-[120px] rounded-full mix-blend-screen"></div>
+        <div class="absolute -bottom-[20%] -left-[10%] w-[50%] h-[50%] bg-[#ffd000]/10 blur-[100px] rounded-full mix-blend-screen"></div>
+        <!-- Patrón sutil (dots) -->
+        <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMiIgY3k9IjIiIHI9IjIiIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSIvPjwvc3ZnPg==')] opacity-50"></div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-6 md:px-12 text-center relative z-10">
+        
+        <div class="mb-12 lg:mb-16">
+            <h2 class="font-headline text-3xl md:text-5xl lg:text-[54px] font-extrabold text-white mb-6 tracking-tight drop-shadow-xl relative inline-block">
+                Fácil y rápido: ¡Solicita gratis <br class="hidden md:block"/>
+                <span class="text-[#ffd000] relative inline-block mt-2">tu cotización!</span>
+            </h2>
+            <div class="flex justify-center">
+                <p class="font-body text-lg md:text-xl font-medium text-white/90 bg-white/5 backdrop-blur-md inline-flex items-center gap-3 px-6 py-3 rounded-full border border-white/10 shadow-xl">
+                    <span class="material-symbols-outlined text-[#ffd000] animate-pulse">lightbulb</span> 
+                    ¡Permítenos ayudarte! Te guiaremos en pocos pasos a encontrar el kit ideal para ti.
+                </p>
+            </div>
+        </div>
+
+        <!-- The Card -->
+        <div class="max-w-4xl mx-auto bg-white rounded-[40px] shadow-[0_30px_60px_rgba(0,0,0,0.3),_0_0_40px_rgba(255,208,0,0.05)] border border-white/20 p-8 md:p-14 transition-all duration-500 overflow-hidden relative z-20" id="wizard-card">
+            <!-- Textura suave superior -->
+            <div class="absolute top-0 left-0 right-0 h-2 bg-gradient-to-r from-[#ffd000]/50 via-[#ffd000] to-[#ffd000]/50"></div>
+            
+            <div class="text-center mb-6">
+                <span id="step-indicator" class="font-body font-medium text-black text-[15px]">Paso 1 de 9</span>
+            </div>
+            
+            <!-- Progress Bar -->
+            <div class="w-full bg-gray-200 h-[2px] mb-12 relative mx-auto max-w-4xl">
+                <div id="progress-bar" class="absolute top-0 left-0 h-full bg-[#ffd000] w-[11.1%] shadow-[0_0_8px_rgba(255,208,0,0.5)] transition-all duration-500"></div>
+            </div>
+
+            <h3 id="question-text" class="font-headline text-xl md:text-[22px] font-medium text-black mb-10 tracking-tight transition-all">¿Hogar o Negocio?</h3>
+
+            <div class="flex flex-wrap justify-center gap-6" id="step-1-options">
+                <!-- Option 1: Hogar -->
+                <label class="cursor-pointer relative group">
+                    <input type="radio" name="tipo_propiedad" value="hogar" class="peer sr-only" onchange="showStep2()">
+                    <div class="w-36 h-36 md:w-44 md:h-44 border-2 border-gray-100 rounded-[28px] flex flex-col items-center justify-center gap-4 bg-gray-50/50 hover:bg-[#ffd000] hover:border-[#ffd000] hover:-translate-y-1 hover:shadow-[0_10px_25px_rgba(255,208,0,0.4)] transition-all duration-300 peer-checked:border-[#ffd000] peer-checked:bg-[#ffd000] peer-checked:shadow-[0_10px_25px_rgba(255,208,0,0.3)] peer-checked:-translate-y-2 relative overflow-hidden">
+                        <span class="absolute inset-0 bg-white opacity-0 peer-checked:opacity-20 transition-opacity"></span>
+                        <svg width="54" height="54" viewBox="0 0 24 24" fill="none" class="text-black mb-1 transition-transform group-hover:scale-110 relative z-10">
+                            <path d="M3 9.5L12 30L21 9.5V20C21 20.5304 20.7893 21.0391 20.4142 21.4142C20.0391 21.7893 19.5304 22 19 22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0391 3 20.5304 3 20V9.5Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M3 10L12 3L21 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span class="font-bold text-[17px] text-black relative z-10">Hogar</span>
+                    </div>
+                </label>
+
+                <!-- Option 2: Negocio -->
+                <label class="cursor-pointer relative group">
+                    <input type="radio" name="tipo_propiedad" value="negocio" class="peer sr-only" onchange="showStep2()">
+                    <div class="w-36 h-36 md:w-44 md:h-44 border-2 border-gray-100 rounded-[28px] flex flex-col items-center justify-center gap-4 bg-gray-50/50 hover:bg-[#ffd000] hover:border-[#ffd000] hover:-translate-y-1 hover:shadow-[0_10px_25px_rgba(255,208,0,0.4)] transition-all duration-300 peer-checked:border-[#ffd000] peer-checked:bg-[#ffd000] peer-checked:shadow-[0_10px_25px_rgba(255,208,0,0.3)] peer-checked:-translate-y-2 relative overflow-hidden">
+                        <span class="absolute inset-0 bg-white opacity-0 peer-checked:opacity-20 transition-opacity"></span>
+                        <svg width="54" height="54" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-black mb-1 transition-transform group-hover:scale-110 relative z-10">
+                            <path d="M2.5 7.5L5.5 3H18.5L21.5 7.5"></path>
+                            <path d="M4.5 12V21H19.5V12"></path>
+                            <path d="M14.5 21V16H9.5V21"></path>
+                            <path d="M2.5 7.5H21.5"></path>
+                            <path d="M21.5 7.5V10C21.5 10.5304 21.2893 11.0391 20.9142 11.4142C20.5391 11.7893 20.0304 12 19.5 12C18.9696 12 18.4609 11.7893 18.0858 11.4142C17.7107 11.0391 17.5 10.5304 17.5 10C17.5 10.5304 17.2893 11.0391 16.9142 11.4142C16.5391 11.7893 16.0304 12 15.5 12C14.9696 12 14.4609 11.7893 14.0858 11.4142C13.7107 11.0391 13.5 10.5304 13.5 10C13.5 10.5304 13.2893 11.0391 12.9142 11.4142C12.5391 11.7893 12.0304 12 11.5 12C10.9696 12 10.4609 11.7893 10.0858 11.4142C9.71071 11.0391 9.5 10.5304 9.5 10C9.5 10.5304 9.28929 11.0391 8.91421 11.4142C8.53914 11.7893 8.03043 12 7.5 12C6.96957 12 6.46086 11.7893 6.08579 11.4142C5.71071 11.0391 5.5 10.5304 5.5 10C5.5 10.5304 5.28929 11.0391 4.91421 11.4142C4.53914 11.7893 4.03043 12 3.5 12C2.96957 12 2.46086 11.7893 2.08579 11.4142C1.71071 11.0391 1.5 10.5304 1.5 10V7.5"></path>
+                        </svg>
+                        <span class="font-bold text-[17px] text-black relative z-10">Negocio</span>
+                    </div>
+                </label>
+            </div>
+
+            <!-- Formularios Dinámicos -->
+            <!-- Formulario Hogar -->
+            <div id="form-hogar" class="mt-12 hidden text-left border-t border-gray-100 pt-10">
+                <div class="mb-8 text-center">
+                    <p class="text-sm font-bold text-[#ffd000] uppercase tracking-widest mb-2">Para tu Hogar</p>
+                    <h4 class="font-headline text-2xl font-black text-black">Déjanos tus datos, nos contactaremos contigo</h4>
+                </div>
+                
+                <form onsubmit="event.preventDefault(); let h_t = document.getElementById('tipo-hogar').value; let h_n = document.getElementById('nom-hogar').value; let h_c = document.getElementById('cel-hogar').value; window.open('https://wa.me/51942866377?text=' + encodeURIComponent('Hola, quiero cotizar alarma para Hogar. \nInmueble: ' + h_t + '\nNombre: ' + h_n + '\nCelular: ' + h_c), '_blank');" class="max-w-md mx-auto space-y-5">
+                    <div>
+                        <select id="tipo-hogar" required class="w-full px-5 py-4 border-2 border-gray-200 rounded-[20px] focus:outline-none focus:border-[#ffd000] focus:ring-4 focus:ring-[#ffd000]/20 transition-all font-medium text-gray-700 bg-white cursor-pointer">
+                            <option value="">¿Tipo de vivienda?*</option>
+                            <option value="Departamento">Departamento</option>
+                            <option value="Casa Chalet">Casa / Chalet</option>
+                            <option value="Condominio">Condominio</option>
+                        </select>
+                    </div>
+                    <div>
+                        <input type="text" id="nom-hogar" required class="w-full px-5 py-4 border-2 border-gray-200 rounded-[20px] focus:outline-none focus:border-[#ffd000] focus:ring-4 focus:ring-[#ffd000]/20 transition-all placeholder-gray-400 font-medium" placeholder="Nombres y Apellidos*">
+                    </div>
+                    <div>
+                        <input type="tel" id="cel-hogar" required class="w-full px-5 py-4 border-2 border-gray-200 rounded-[20px] focus:outline-none focus:border-[#ffd000] focus:ring-4 focus:ring-[#ffd000]/20 transition-all placeholder-gray-400 font-medium" placeholder="Teléfono celular*">
+                    </div>
+                    <div>
+                        <input type="email" id="mail-hogar" required class="w-full px-5 py-4 border-2 border-gray-200 rounded-[20px] focus:outline-none focus:border-[#ffd000] focus:ring-4 focus:ring-[#ffd000]/20 transition-all placeholder-gray-400 font-medium" placeholder="Correo electrónico*">
+                    </div>
+                    <div class="flex items-start gap-3 pt-2">
+                        <input type="checkbox" required class="mt-1 w-5 h-5 rounded border-gray-300 text-black focus:ring-black cursor-pointer transition-all">
+                        <p class="text-[13px] text-gray-500 leading-tight">He leído y acepto la <a href="#" class="font-bold border-b-2 border-gray-300 hover:border-black transition-colors text-black pb-0.5">Política de Privacidad</a>.</p>
+                    </div>
+                    <button type="submit" class="w-full bg-[#1a1c1c] text-white hover:bg-black font-black font-headline text-lg py-5 rounded-[20px] mt-4 shadow-[0_8px_20px_rgba(0,0,0,0.15)] hover:shadow-[0_12px_25px_rgba(0,0,0,0.2)] transition-all duration-300 flex items-center justify-center gap-2 overflow-hidden relative group border hover:border-white/20">
+                        <span class="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:animate-[shine_1.5s_ease-out_forwards]"></span>
+                        Ver mi Cotización
+                        <span class="material-symbols-outlined font-bold text-sm bg-[#ffd000] text-black w-8 h-8 rounded-full flex items-center justify-center ml-2 border border-[#ecc200]">arrow_forward</span>
+                    </button>
+                    <p class="text-[11px] text-center text-gray-400 mt-3 font-medium uppercase tracking-wider flex items-center justify-center gap-1.5"><span class="material-symbols-outlined text-[13px]">lock</span> Tus datos están seguros.</p>
+                </form>
+            </div>
+
+            <!-- Formulario Negocio -->
+            <div id="form-negocio" class="mt-12 hidden text-left border-t border-gray-100 pt-10">
+                <div class="mb-8 text-center">
+                    <p class="text-sm font-bold text-[#ffd000] uppercase tracking-widest mb-2">Para tu Negocio</p>
+                    <h4 class="font-headline text-2xl font-black text-black">Protege tu empresa, déjanos tus datos</h4>
+                </div>
+                
+                <form onsubmit="event.preventDefault(); let n_t = document.getElementById('tipo-negocio').value; let n_r = document.getElementById('ruc-negocio').value; let n_n = document.getElementById('nom-negocio').value; let n_c = document.getElementById('cel-negocio').value; window.open('https://wa.me/51942866377?text=' + encodeURIComponent('Hola, quiero cotizar alarma para Negocio. \nLocal: ' + n_t + '\nEmpresa/RUC: ' + n_r + '\nNombre: ' + n_n + '\nCelular: ' + n_c), '_blank');" class="max-w-md mx-auto space-y-5">
+                    <div>
+                        <select id="tipo-negocio" required class="w-full px-5 py-4 border-2 border-gray-200 rounded-[20px] focus:outline-none focus:border-[#ffd000] focus:ring-4 focus:ring-[#ffd000]/20 transition-all font-medium text-gray-700 bg-white cursor-pointer">
+                            <option value="">¿Tipo de local?*</option>
+                            <option value="Local a pie de calle">Local a pie de calle</option>
+                            <option value="Oficinas / Despacho">Oficinas / Despacho</option>
+                            <option value="Nave / Almacén">Nave / Almacén</option>
+                        </select>
+                    </div>
+                    <div>
+                        <input type="text" id="ruc-negocio" required class="w-full px-5 py-4 border-2 border-gray-200 rounded-[20px] focus:outline-none focus:border-[#ffd000] focus:ring-4 focus:ring-[#ffd000]/20 transition-all placeholder-gray-400 font-medium" placeholder="RUC / Nombre de la empresa*">
+                    </div>
+                    <div>
+                        <input type="text" id="nom-negocio" required class="w-full px-5 py-4 border-2 border-gray-200 rounded-[20px] focus:outline-none focus:border-[#ffd000] focus:ring-4 focus:ring-[#ffd000]/20 transition-all placeholder-gray-400 font-medium" placeholder="Tu Nombre y Apellido*">
+                    </div>
+                    <div>
+                        <input type="tel" id="cel-negocio" required class="w-full px-5 py-4 border-2 border-gray-200 rounded-[20px] focus:outline-none focus:border-[#ffd000] focus:ring-4 focus:ring-[#ffd000]/20 transition-all placeholder-gray-400 font-medium" placeholder="Teléfono celular*">
+                    </div>
+                    <div class="flex items-start gap-3 pt-2">
+                        <input type="checkbox" required class="mt-1 w-5 h-5 rounded border-gray-300 text-black focus:ring-black cursor-pointer transition-all">
+                        <p class="text-[13px] text-gray-500 leading-tight">He leído y acepto la <a href="#" class="font-bold border-b-2 border-gray-300 hover:border-black transition-colors text-black pb-0.5">Política de Privacidad</a>.</p>
+                    </div>
+                    <button type="submit" class="w-full bg-[#1a1c1c] text-white hover:bg-black font-black font-headline text-lg py-5 rounded-[20px] mt-4 shadow-[0_8px_20px_rgba(0,0,0,0.15)] hover:shadow-[0_12px_25px_rgba(0,0,0,0.2)] transition-all duration-300 flex items-center justify-center gap-2 overflow-hidden relative group border hover:border-white/20">
+                        <span class="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:animate-[shine_1.5s_ease-out_forwards]"></span>
+                        Ver mi Cotización
+                        <span class="material-symbols-outlined font-bold text-sm bg-[#ffd000] text-black w-8 h-8 rounded-full flex items-center justify-center ml-2 border border-[#ecc200]">arrow_forward</span>
+                    </button>
+                    <p class="text-[11px] text-center text-gray-400 mt-3 font-medium uppercase tracking-wider flex items-center justify-center gap-1.5"><span class="material-symbols-outlined text-[13px]">lock</span> Tus datos están seguros.</p>
+                </form>
+            </div>
+
+        </div>
+
+        <script>
+            function showStep2() {
+                setTimeout(function(){
+                    document.getElementById('step-1-options').style.opacity = '0.5';
+                    document.getElementById('step-indicator').innerText = "Paso 2 de 9";
+                    document.getElementById('progress-bar').style.width = "22.2%";
+                    
+                    const tipoInput = document.querySelector('input[name="tipo_propiedad"]:checked');
+                    if (!tipoInput) return;
+                    const tipo = tipoInput.value;
+                    
+                    document.getElementById('form-hogar').classList.add('hidden');
+                    document.getElementById('form-hogar').classList.remove('animate-fade-in');
+                    document.getElementById('form-negocio').classList.add('hidden');
+                    document.getElementById('form-negocio').classList.remove('animate-fade-in');
+                    
+                    const formToShow = document.getElementById(tipo === 'hogar' ? 'form-hogar' : 'form-negocio');
+                    formToShow.classList.remove('hidden');
+                    formToShow.classList.add('animate-fade-in');
+                    
+                    formToShow.scrollIntoView({ behavior: 'smooth', block: 'end' });
+                }, 300);
+            }
+        </script>
+        
+        <style>
+            .animate-fade-in { animation: fadeIn 0.6s ease-out forwards; }
+            @keyframes fadeIn {
+                0% { opacity: 0; transform: translateY(-10px); }
+                100% { opacity: 1; transform: translateY(0); }
+            }
+        </style>
+        
+    </div>
+</section>
+<!-- Alarm Types Gallery (Item 4) -->
+<!-- Interactive 3D Map Section (Item 4) -->
+<section id="sistemas" class="py-16 lg:py-20 bg-white relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-6 md:px-12">
+        <div class="text-center max-w-4xl mx-auto mb-10 lg:mb-14">
+            <h2 class="font-headline text-3xl md:text-[42px] leading-tight font-extrabold mb-6 text-black tracking-tight">¿Cómo funciona nuestro <br class="hidden md:block" />sistema de alarma?</h2>
+            <p class="font-body text-lg md:text-xl text-gray-700 font-medium">Detectamos, alertamos, protegemos: nuestra alarma está conectada a una Central de Monitoreo 24/7 y ante una intrusión se activa el protocolo dando aviso a la policía.</p>
+        </div>
+        
+        <!-- Contenedor Mapa 3D Interactivo -->
+        <div class="relative w-full max-w-6xl mx-auto bg-stone-50 rounded-2xl overflow-visible border border-stone-200 p-4 md:p-8">
+            <!-- Imagen base -->
+            <img src="./prosegur-alarmas-catalogo-3d.webp" alt="Plano 3D de Casa Prosegur" class="w-full h-auto object-contain drop-shadow-xl">
+            
+            <!-- Puntos Interactivos (Cruces amarillas) -->
+            
+            <!-- 1. Placa Disuasoria (Terraza exterior) -->
+            <div class="absolute group" style="top: 52%; left: 24%;">
+                <button class="relative flex items-center justify-center w-6 h-6 md:w-8 md:h-8 bg-[#ffd000] text-black rounded-full font-bold text-lg md:text-xl shadow-[0_0_15px_rgba(255,208,0,0.8)] transition-transform group-hover:scale-125 z-10">
+                    +
+                </button>
+                <div class="absolute bottom-full left-[20%] md:left-1/2 -translate-x-1/2 mb-4 w-64 bg-white rounded-xl shadow-[0_10px_30px_rgba(0,0,0,0.15)] border border-gray-100 p-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 transform group-hover:-translate-y-2 pointer-events-none before:content-[''] before:absolute before:top-full before:left-1/2 before:-translate-x-1/2 before:border-8 before:border-transparent before:border-t-white">
+                    <div class="flex items-center gap-3 mb-2">
+                        <div class="w-12 h-12 flex items-center justify-center flex-shrink-0">
+                            <img src="./prosegur-alarmas-Placa-Peru.jpg" alt="Placa Disuasoria" class="max-w-full max-h-full object-contain mix-blend-multiply drop-shadow-sm">
+                        </div>
+                        <h5 class="font-headline font-bold text-black leading-tight text-sm">Placa Disuasoria</h5>
+                    </div>
+                    <p class="text-[13px] text-gray-600 leading-snug">Advierte y disuade a los intrusos que tu hogar está protegido activamente por Prosegur.</p>
+                </div>
+            </div>
+
+            <!-- 2. Sirena Exterior (Pared exterior terraza) -->
+            <div class="absolute group" style="top: 35%; left: 21%;">
+                <button class="relative flex items-center justify-center w-6 h-6 md:w-8 md:h-8 bg-[#ffd000] text-black rounded-full font-bold text-lg md:text-xl shadow-[0_0_15px_rgba(255,208,0,0.8)] transition-transform group-hover:scale-125 z-10">
+                    +
+                </button>
+                <div class="absolute bottom-full left-[20%] md:left-1/2 -translate-x-1/2 mb-4 w-64 bg-white rounded-xl shadow-[0_10px_30px_rgba(0,0,0,0.15)] border border-gray-100 p-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 transform group-hover:-translate-y-2 pointer-events-none before:content-[''] before:absolute before:top-full before:left-1/2 before:-translate-x-1/2 before:border-8 before:border-transparent before:border-t-white">
+                    <div class="flex items-center gap-3 mb-2">
+                        <div class="w-12 h-12 flex items-center justify-center flex-shrink-0">
+                            <img src="./prosegur-alarmas-Sirena+exterior.webp" alt="Sirena Exterior" class="max-w-full max-h-full object-contain drop-shadow-sm">
+                        </div>
+                        <h5 class="font-headline font-bold text-black leading-tight text-sm">Sirena Exterior</h5>
+                    </div>
+                    <p class="text-[13px] text-gray-600 leading-snug">Emite un sonido ensordecedor y señal luminosa para alertar inmediatamente al vecindario.</p>
+                </div>
+            </div>
+
+            <!-- 3. Detector Magnético (Cocina / Ventana) -->
+            <div class="absolute group" style="top: 25%; left: 36%;">
+                <button class="relative flex items-center justify-center w-6 h-6 md:w-8 md:h-8 bg-[#ffd000] text-black rounded-full font-bold text-lg md:text-xl shadow-[0_0_15px_rgba(255,208,0,0.8)] transition-transform group-hover:scale-125 z-10">
+                    +
+                </button>
+                <div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-4 w-64 bg-white rounded-xl shadow-[0_10px_30px_rgba(0,0,0,0.15)] border border-gray-100 p-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 transform group-hover:-translate-y-2 pointer-events-none before:content-[''] before:absolute before:top-full before:left-1/2 before:-translate-x-1/2 before:border-8 before:border-transparent before:border-t-white">
+                    <div class="flex items-center gap-3 mb-2">
+                        <div class="w-12 h-12 flex items-center justify-center flex-shrink-0">
+                            <img src="./prosegur-alarmas-Magnetico.webp" alt="Detector Magnético" class="max-w-full max-h-full object-contain drop-shadow-sm">
+                        </div>
+                        <h5 class="font-headline font-bold text-black leading-tight text-sm">Detector Magnético</h5>
+                    </div>
+                    <p class="text-[13px] text-gray-600 leading-snug">Alerta inmediata en caso de apertura no autorizada de puertas y ventanas perimetrales.</p>
+                </div>
+            </div>
+
+            <!-- 4. Detector con Cámara PIRCAM (Sala de Estar) -->
+            <div class="absolute group" style="top: 41%; left: 38%;">
+                <button class="relative flex items-center justify-center w-6 h-6 md:w-8 md:h-8 bg-[#ffd000] text-black rounded-full font-bold text-lg md:text-xl shadow-[0_0_15px_rgba(255,208,0,0.8)] transition-transform group-hover:scale-125 z-10">
+                    +
+                </button>
+                <div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-4 w-64 bg-white rounded-xl shadow-[0_10px_30px_rgba(0,0,0,0.15)] border border-gray-100 p-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 transform group-hover:-translate-y-2 pointer-events-none before:content-[''] before:absolute before:top-full before:left-1/2 before:-translate-x-1/2 before:border-8 before:border-transparent before:border-t-white">
+                    <div class="flex items-center gap-3 mb-2">
+                        <div class="w-12 h-12 flex items-center justify-center flex-shrink-0">
+                            <img src="./prosegur-alarmas-Pircam.jpg" alt="Detector Pircam" class="max-w-full max-h-full object-contain mix-blend-multiply drop-shadow-sm">
+                        </div>
+                        <h5 class="font-headline font-bold text-black leading-tight text-sm">Detector con Cámara</h5>
+                    </div>
+                    <p class="text-[13px] text-gray-600 leading-snug">Capta movimiento y toma ráfagas de imágenes, enviadas al instante a nuestra Central.</p>
+                </div>
+            </div>
+
+            <!-- 5. Teclado de Control (Entrada Principal) -->
+            <div class="absolute group" style="top: 24%; left: 55%;">
+                <button class="relative flex items-center justify-center w-6 h-6 md:w-8 md:h-8 bg-[#ffd000] text-black rounded-full font-bold text-lg md:text-xl shadow-[0_0_15px_rgba(255,208,0,0.8)] transition-transform group-hover:scale-125 z-10">
+                    +
+                </button>
+                <div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-4 w-64 bg-white rounded-xl shadow-[0_10px_30px_rgba(0,0,0,0.15)] border border-gray-100 p-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 transform group-hover:-translate-y-2 pointer-events-none before:content-[''] before:absolute before:top-full before:left-1/2 before:-translate-x-1/2 before:border-8 before:border-transparent before:border-t-white">
+                    <div class="flex items-center gap-3 mb-2">
+                        <div class="w-12 h-12 flex items-center justify-center flex-shrink-0">
+                            <img src="./prosegur-alarmas-Teclado.webp" alt="Teclado Inteligente" class="max-w-full max-h-full object-contain border border-gray-100 rounded bg-stone-50 drop-shadow-sm p-1">
+                        </div>
+                        <h5 class="font-headline font-bold text-black leading-tight text-sm">Teclado de Control</h5>
+                    </div>
+                    <p class="text-[13px] text-gray-600 leading-snug">Controla tu alarma de la forma más fácil, con opción de código de coacción en emergencias.</p>
+                </div>
+            </div>
+
+            <!-- 6. Sirena Interior (Pasillo Baño) -->
+            <div class="absolute group" style="top: 31%; left: 59%;">
+                <button class="relative flex items-center justify-center w-6 h-6 md:w-8 md:h-8 bg-[#ffd000] text-black rounded-full font-bold text-lg md:text-xl shadow-[0_0_15px_rgba(255,208,0,0.8)] transition-transform group-hover:scale-125 z-10">
+                    +
+                </button>
+                <div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-4 w-64 bg-white rounded-xl shadow-[0_10px_30px_rgba(0,0,0,0.15)] border border-gray-100 p-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 transform group-hover:-translate-y-2 pointer-events-none before:content-[''] before:absolute before:top-full before:left-1/2 before:-translate-x-1/2 before:border-8 before:border-transparent before:border-t-white">
+                    <div class="flex items-center gap-3 mb-2">
+                        <div class="w-12 h-12 flex items-center justify-center flex-shrink-0">
+                            <img src="./prosegur-alarmas-Sirena-interior.webp" alt="Sirena Interior" class="max-w-full max-h-full object-contain drop-shadow-sm">
+                        </div>
+                        <h5 class="font-headline font-bold text-black leading-tight text-sm">Sirena Interior</h5>
+                    </div>
+                    <p class="text-[13px] text-gray-600 leading-snug">Potente aviso acústico interior que aturde y disuade a cualquier intruso instantáneamente.</p>
+                </div>
+            </div>
+
+            <!-- 7. Panel de Comunicación (Pasillo central) -->
+            <div class="absolute group" style="top: 48%; left: 61%;">
+                <button class="relative flex items-center justify-center w-6 h-6 md:w-8 md:h-8 bg-[#ffd000] text-black rounded-full font-bold text-lg md:text-xl shadow-[0_0_15px_rgba(255,208,0,0.8)] transition-transform group-hover:scale-125 z-10">
+                    +
+                </button>
+                <div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-4 w-64 bg-white rounded-xl shadow-[0_10px_30px_rgba(0,0,0,0.15)] border border-gray-100 p-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 transform group-hover:-translate-y-2 pointer-events-none before:content-[''] before:absolute before:top-full before:left-1/2 before:-translate-x-1/2 before:border-8 before:border-transparent before:border-t-white">
+                    <div class="flex items-center gap-3 mb-2">
+                        <div class="w-12 h-12 flex items-center justify-center flex-shrink-0">
+                            <img src="./prosegur-alarmas-Panel.webp" alt="Panel de Comunicación" class="max-w-full max-h-full object-contain drop-shadow-sm">
+                        </div>
+                        <h5 class="font-headline font-bold text-black leading-tight text-sm">Panel de Comunicación</h5>
+                    </div>
+                    <p class="text-[13px] text-gray-600 leading-snug">El verdadero cerebro del sistema, mantiene su conectividad anti-sabotaje y anti-inhibición.</p>
+                </div>
+            </div>
+
+            <!-- 8. Cámara IP (Dormitorio Principal) -->
+            <div class="absolute group" style="top: 66%; left: 44%;">
+                <button class="relative flex items-center justify-center w-6 h-6 md:w-8 md:h-8 bg-[#ffd000] text-black rounded-full font-bold text-lg md:text-xl shadow-[0_0_15px_rgba(255,208,0,0.8)] transition-transform group-hover:scale-125 z-10">
+                    +
+                </button>
+                <div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-4 w-64 bg-white rounded-xl shadow-[0_10px_30px_rgba(0,0,0,0.15)] border border-gray-100 p-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 transform group-hover:-translate-y-2 pointer-events-none before:content-[''] before:absolute before:top-full before:left-1/2 before:-translate-x-1/2 before:border-8 before:border-transparent before:border-t-white">
+                    <div class="flex items-center gap-3 mb-2">
+                        <div class="w-12 h-12 flex items-center justify-center flex-shrink-0">
+                            <img src="./prosegur-alarmas-Camaras.webp" alt="Cámara de Videovigilancia" class="max-w-full max-h-full object-contain drop-shadow-sm">
+                        </div>
+                        <h5 class="font-headline font-bold text-black leading-tight text-sm">Cámara IP Bi-direccional</h5>
+                    </div>
+                    <p class="text-[13px] text-gray-600 leading-snug">Visualiza tu casa en tiempo real desde tu celular, con visión nocturna y habla/escucha.</p>
+                </div>
+            </div>
+
+            <!-- 9. Detector PIR Movimiento (Entre Cuartos) -->
+            <div class="absolute group" style="top: 52%; left: 52%;">
+                <button class="relative flex items-center justify-center w-6 h-6 md:w-8 md:h-8 bg-[#ffd000] text-black rounded-full font-bold text-lg md:text-xl shadow-[0_0_15px_rgba(255,208,0,0.8)] transition-transform group-hover:scale-125 z-10">
+                    +
+                </button>
+                <div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-4 w-64 bg-white rounded-xl shadow-[0_10px_30px_rgba(0,0,0,0.15)] border border-gray-100 p-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 transform group-hover:-translate-y-2 pointer-events-none before:content-[''] before:absolute before:top-full before:left-1/2 before:-translate-x-1/2 before:border-8 before:border-transparent before:border-t-white">
+                    <div class="flex items-center gap-3 mb-2">
+                        <div class="w-12 h-12 flex items-center justify-center flex-shrink-0">
+                            <img src="./prosegur-alarmas-Pirs.webp" alt="Detector PIR Infrarrojo" class="max-w-full max-h-full object-contain drop-shadow-sm border border-gray-50 rounded bg-white p-1">
+                        </div>
+                        <h5 class="font-headline font-bold text-black leading-tight text-sm">Detector Infrarrojo</h5>
+                    </div>
+                    <p class="text-[13px] text-gray-600 leading-snug">Detecta intrusiones al instante gracias a su tecnología infrarroja y térmica de gran precisión.</p>
+                </div>
+            </div>
+
+            <!-- 10. Detector de Humo (Habitación secundaria) -->
+            <div class="absolute group" style="top: 56%; left: 82%;">
+                <button class="relative flex items-center justify-center w-6 h-6 md:w-8 md:h-8 bg-[#ffd000] text-black rounded-full font-bold text-lg md:text-xl shadow-[0_0_15px_rgba(255,208,0,0.8)] transition-transform group-hover:scale-125 z-10">
+                    +
+                </button>
+                <div class="absolute bottom-full right-0 md:left-1/2 md:-translate-x-1/2 mb-4 w-64 bg-white rounded-xl shadow-[0_10px_30px_rgba(0,0,0,0.15)] border border-gray-100 p-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 transform group-hover:-translate-y-2 pointer-events-none before:content-[''] before:absolute before:top-full before:right-6 md:before:left-1/2 md:before:-translate-x-1/2 before:border-8 before:border-transparent before:border-t-white">
+                    <div class="flex items-center gap-3 mb-2">
+                        <div class="w-12 h-12 flex items-center justify-center flex-shrink-0">
+                            <img src="./prosegur-alarmas-Detector-humo.webp" alt="Detector de Humo" class="max-w-full max-h-full object-contain drop-shadow-sm border border-gray-100 rounded bg-white p-2">
+                        </div>
+                        <h5 class="font-headline font-bold text-black leading-tight text-sm">Detector de Humo</h5>
+                    </div>
+                    <p class="text-[13px] text-gray-600 leading-snug">Notifica en una fase temprana cualquier incidencia o principio de incendio las 24 horas.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Protocolo de Actuación (NUEVA SECCIÓN) -->
+<section id="protocolo" class="py-16 lg:py-20 bg-stone-50 border-t border-stone-200 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
+        
+        <div class="text-center max-w-4xl mx-auto mb-10 lg:mb-14">
+            <h2 class="font-headline text-3xl md:text-[42px] leading-tight font-extrabold mb-6 text-black tracking-tight">Detectamos, alertamos, protegemos.</h2>
+            <p class="font-body text-lg md:text-xl text-gray-700 font-medium">Nuestra alarma está conectada a una Central de Monitoreo 24/7 y ante una intrusión se activa el protocolo dando aviso a la policía.</p>
+        </div>
+
+        <!-- Imagen del Kit -->
+        <div class="flex flex-col items-center justify-center mb-14 lg:mb-20">
+            <img src="./kit.webp" alt="Kit Alarmas Prosegur Perú" class="w-full max-w-4xl object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-700">
+            <p class="font-headline font-bold text-gray-500 uppercase tracking-widest mt-6 text-sm">Kit de alarma inteligente Prosegur</p>
+        </div>
+
+        <div class="relative">
+            <!-- Linea conectora de fondo (visible solo en escritorio) -->
+            <div class="hidden lg:block absolute top-[52px] left-[12%] right-[12%] h-1 bg-stone-200 -z-0"></div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8 text-center">
+                
+                <!-- Paso 1 -->
+                <div class="flex flex-col items-center relative group">
+                    <p class="font-bold text-stone-400 text-xs md:text-sm tracking-widest uppercase mb-4 h-8 md:h-5 flex items-end">Prosegur Detección</p>
+                    <div class="w-28 h-28 rounded-full bg-white border-[6px] border-stone-100 shadow-[0_10px_30px_rgba(0,0,0,0.06)] flex items-center justify-center mb-6 group-hover:bg-[#ffd000] group-hover:border-[#ffd000] group-hover:-translate-y-2 transition-all duration-300 z-10 relative">
+                        <span class="font-headline font-black text-4xl text-black">1</span>
+                        <!-- check icon decorativo -->
+                        <div class="absolute -bottom-2 -right-2 bg-black w-8 h-8 rounded-full flex items-center justify-center text-[#ffd000] scale-0 group-hover:scale-100 transition-transform duration-300">
+                            <span class="material-symbols-outlined text-[16px]">sensors</span>
+                        </div>
+                    </div>
+                    <h3 class="font-headline font-bold text-xl mb-3 text-black">Detección</h3>
+                    <p class="text-stone-600 leading-snug px-4">Detectamos el intento de intrusión y activamos la alarma.</p>
+                </div>
+
+                <!-- Paso 2 -->
+                <div class="flex flex-col items-center relative group">
+                    <p class="font-bold text-stone-400 text-xs md:text-sm tracking-widest uppercase mb-4 h-8 md:h-5 flex items-end">Central Receptora Prosegur</p>
+                    <div class="w-28 h-28 rounded-full bg-white border-[6px] border-stone-100 shadow-[0_10px_30px_rgba(0,0,0,0.06)] flex items-center justify-center mb-6 group-hover:bg-[#ffd000] group-hover:border-[#ffd000] group-hover:-translate-y-2 transition-all duration-300 z-10 relative">
+                        <span class="font-headline font-black text-4xl text-black">2</span>
+                        <div class="absolute -bottom-2 -right-2 bg-black w-8 h-8 rounded-full flex items-center justify-center text-[#ffd000] scale-0 group-hover:scale-100 transition-transform duration-300">
+                            <span class="material-symbols-outlined text-[16px]">support_agent</span>
+                        </div>
+                    </div>
+                    <h3 class="font-headline font-bold text-xl mb-3 text-black">Comprobación</h3>
+                    <p class="text-stone-600 leading-snug px-4">Nuestra Central Receptora de Alarmas verifica el salto de alarma.</p>
+                </div>
+
+                <!-- Paso 3 -->
+                <div class="flex flex-col items-center relative group">
+                    <p class="font-bold text-stone-400 text-xs md:text-sm tracking-widest uppercase mb-4 h-8 md:h-5 flex items-end">Aviso a la Policía</p>
+                    <div class="w-28 h-28 rounded-full bg-white border-[6px] border-stone-100 shadow-[0_10px_30px_rgba(0,0,0,0.06)] flex items-center justify-center mb-6 group-hover:bg-[#ffd000] group-hover:border-[#ffd000] group-hover:-translate-y-2 transition-all duration-300 z-10 relative">
+                        <span class="font-headline font-black text-4xl text-black">3</span>
+                        <div class="absolute -bottom-2 -right-2 bg-black w-8 h-8 rounded-full flex items-center justify-center text-[#ffd000] scale-0 group-hover:scale-100 transition-transform duration-300">
+                            <span class="material-symbols-outlined text-[16px]">local_police</span>
+                        </div>
+                    </div>
+                    <h3 class="font-headline font-bold text-xl mb-3 text-black">Aviso</h3>
+                    <p class="text-stone-600 leading-snug px-4">Si se confirma, damos aviso a la Policía de manera inmediata.</p>
+                </div>
+
+                <!-- Paso 4 -->
+                <div class="flex flex-col items-center relative group">
+                    <p class="font-bold text-[#b39200] text-xs md:text-sm tracking-widest uppercase mb-4 h-8 md:h-5 flex items-end">Prosegur Acuda</p>
+                    <div class="w-28 h-28 rounded-full bg-[#ffd000] border-[6px] border-white shadow-[0_10px_30px_rgba(255,208,0,0.3)] flex items-center justify-center mb-6 group-hover:-translate-y-2 transition-all duration-300 z-10 relative">
+                        <span class="font-headline font-black text-4xl text-black">4</span>
+                        <div class="absolute -bottom-2 -right-2 bg-black w-8 h-8 rounded-full flex items-center justify-center text-[#ffd000] scale-0 group-hover:scale-100 transition-transform duration-300">
+                            <span class="material-symbols-outlined text-[16px]">security</span>
+                        </div>
+                    </div>
+                    <h3 class="font-headline font-bold text-xl mb-3 text-black">Actuación</h3>
+                    <p class="text-stone-600 leading-snug px-4">Un Vigilante de Seguridad también podría acudir a comprobarlo.</p>
+                </div>
+
+            </div>
+        </div>
+        
+    </div>
+</section>
+
+<!-- Anti-Inhibición (NUEVA SECCIÓN) -->
+<section id="anti-inhibicion" class="py-16 lg:py-20 bg-white relative overflow-hidden border-t border-stone-200">
+    <div class="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
+        
+        <!-- Texto Introductorio -->
+        <div class="text-center max-w-5xl mx-auto mb-12 lg:mb-16">
+            <h2 class="font-headline text-3xl md:text-[42px] leading-tight font-extrabold mb-8 text-black tracking-tight">Tu alarma protegida de inhibiciones de señal</h2>
+            <p class="font-body text-[17px] md:text-xl text-gray-600 font-medium leading-relaxed mb-6">Los inhibidores de frecuencia pueden afectar a la red móvil, al WiFi, a radares o al GPS, sin embargo, tu tranquilidad estará asegurada porque nuestra alarma dispone de una <strong class="text-black font-extrabold bg-[#ffd000]/10 px-1 py-0.5 rounded border-b-2 border-[#ffd000]">doble vía de comunicación: una línea GPRS y otra línea IP</strong>.</p>
+            <p class="font-body text-[17px] md:text-xl text-gray-600 font-medium leading-relaxed">Si se produce una inhibición de la línea GPRS la alarma seguirá funcionando ya que la señal de la alarma se enviará a través de la línea IP, pudiendo enviar imágenes para verificar la incidencia y avisar a la Policía si es necesario.</p>
+        </div>
+
+        <!-- Diagrama de Flujo Anti-Inhibición -->
+        <div class="relative w-full overflow-x-auto pb-6 md:pb-0 hide-scrollbar -mx-6 px-6 md:mx-0 md:px-0">
+            <div class="min-w-[900px] md:min-w-0 flex items-start justify-between gap-4 md:gap-8 relative lg:mt-12">
+                
+                <!-- Conectores visuales de fondo (Líneas) -->
+                <div class="absolute top-[80px] left-[12%] right-[12%] -z-10 flex items-center justify-between pointer-events-none">
+                    <!-- Conector Paso 1 al 2 (Doble vía: GPRS / IP) -->
+                    <div class="w-1/3 relative h-6">
+                        <div class="absolute inset-0 top-0 h-[2px] bg-red-400 border-t-2 border-dashed border-red-500"></div>
+                        <div class="absolute inset-x-0 bottom-0 h-[2px] bg-green-500 rounded-full shadow-[0_0_5px_rgba(34,197,94,0.5)]"></div>
+                    </div>
+                    <!-- Conector Paso 2 al 3 -->
+                    <div class="w-1/3 h-[2px] bg-stone-300 border-t-[3px] border-dotted border-stone-400"></div>
+                    <!-- Conector Paso 3 al 4 -->
+                    <div class="w-1/3 h-[2px] bg-stone-300 border-t-[3px] border-dotted border-stone-400"></div>
+                </div>
+
+                <!-- Step 1: Salto de Alarma -->
+                <div class="flex flex-col items-center flex-1 z-10 lg:w-48 shrink-0 group">
+                    <div class="h-12 mb-4 flex items-end justify-center">
+                        <h4 class="font-bold text-black text-[13px] tracking-widest uppercase text-center border-b border-[#ffd000] pb-1">Salto de alarma</h4>
+                    </div>
+                    <div class="w-32 h-32 md:w-40 md:h-40 rounded-3xl bg-white border border-stone-200 shadow-[0_15px_30px_rgba(0,0,0,0.08)] flex items-center justify-center p-6 transition-all duration-300 group-hover:scale-105 group-hover:bg-[#ffd000] group-hover:border-[#ffd000]">
+                        <img src="./ppt-inhibidor-paso-uno-new.webp" alt="Sensor detecta intrusión" class="max-w-full max-h-full object-contain">
+                    </div>
+                </div>
+
+                <!-- Step 2: Panel de Comunicación -->
+                <div class="flex flex-col items-center flex-1 z-10 lg:w-48 shrink-0 group">
+                    <div class="h-12 mb-4 flex flex-col items-center justify-end text-[10px] font-bold tracking-wider uppercase mb-2">
+                        <div class="text-red-500 line-through mb-1">Corte línea GPRS (Sin GPRS)</div>
+                        <div class="text-green-600 flex items-center gap-1"><span class="block w-2.5 h-2.5 rounded-full bg-green-500 animate-pulse"></span>Línea IP Activa</div>
+                    </div>
+                    <div class="w-32 h-32 md:w-40 md:h-40 rounded-3xl bg-white border border-stone-200 shadow-[0_15px_30px_rgba(0,0,0,0.08)] flex items-center justify-center p-6 transition-all duration-300 group-hover:scale-105 group-hover:bg-[#ffd000] group-hover:border-[#ffd000]">
+                        <img src="./ppt-inhibidor-paso-dos-new.webp" alt="Panel de comunicación IP" class="max-w-full max-h-full object-contain">
+                    </div>
+                    <h4 class="font-bold text-black text-[13px] tracking-widest uppercase text-center mt-6">Panel de comunicación</h4>
+                </div>
+
+                <!-- Step 3: Central Receptora -->
+                <div class="flex flex-col items-center flex-1 z-10 lg:w-48 shrink-0 group">
+                    <div class="h-12 mb-4 flex items-end justify-center">
+                        <p class="text-[10px] text-stone-500 tracking-widest uppercase text-center">Línea de comunicación</p>
+                    </div>
+                    <div class="w-32 h-32 md:w-40 md:h-40 rounded-3xl bg-white border border-stone-200 shadow-[0_15px_30px_rgba(0,0,0,0.08)] flex items-center justify-center p-6 transition-all duration-300 group-hover:scale-105 group-hover:bg-[#ffd000] group-hover:border-[#ffd000]">
+                        <img src="./ppt-inhibidor-paso-tres-new.webp" alt="Central Receptora de Alarmas" class="max-w-full max-h-full object-contain">
+                    </div>
+                    <h4 class="font-bold text-black text-[13px] tracking-widest uppercase text-center mt-6">Central Receptora de Alarmas</h4>
+                </div>
+
+                <!-- Step 4: Aviso Policía -->
+                <div class="flex flex-col items-center flex-1 z-10 lg:w-48 shrink-0 group">
+                    <div class="h-12 mb-4 flex items-end justify-center">
+                        <p class="text-[10px] text-stone-500 tracking-widest uppercase text-center">Línea de comunicación</p>
+                    </div>
+                    <div class="w-32 h-32 md:w-40 md:h-40 rounded-3xl bg-[#ffd000] border-4 border-white shadow-[0_15px_30px_rgba(255,208,0,0.4)] flex items-center justify-center p-6 transition-transform hover:scale-105 hover:-translate-y-2 relative">
+                        <img src="./ppt-inhibidor-paso-cuatro.webp" alt="Aviso a Policía" class="max-w-full max-h-full object-contain mix-blend-multiply">
+                    </div>
+                    <h4 class="font-black text-black text-[14px] tracking-widest uppercase text-center mt-6 bg-[#ffd000] px-4 py-1.5 rounded-lg border border-yellow-400">Aviso a la policía</h4>
+                </div>
+
+            </div>
+        </div>
+        
+    </div>
+</section>
+
+<!-- Razones para elegirnos -->
+<section id="razones-prosegur" class="py-16 lg:py-20 bg-white border-t border-stone-200">
+    <div class="max-w-7xl mx-auto px-6 md:px-12 text-center">
+        
+        <div class="mb-10 lg:mb-12 max-w-4xl mx-auto">
+            <h2 class="font-headline text-3xl md:text-[40px] leading-tight font-extrabold text-[#1a1c1c] mb-6 tracking-tight">Razones para elegirnos</h2>
+            <p class="font-body text-[17px] md:text-xl text-[#333] font-medium leading-relaxed">Existen muchas razones para elegir el sistema de Prosegur Alarmas para tu hogar o tu negocio. Estas son las que nos distinguen.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-6 lg:gap-10">
+            
+            <!-- Razón 1 -->
+            <div class="flex flex-col text-left group">
+                <div class="relative w-full aspect-[4/3] md:aspect-[3/2] overflow-hidden rounded mb-5">
+                    <img src="./jcr_content.jpg" alt="Disuasión eficaz" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                    <h3 class="absolute bottom-5 inset-x-0 text-center font-body text-xl md:text-[22px] font-bold text-white tracking-wide drop-shadow-md">Disuasión eficaz</h3>
+                </div>
+                <p class="font-body text-[#333] text-center leading-relaxed text-[16px] font-medium px-2">La propiedad está protegida y conectada 24 h con aviso a la policía.</p>
+            </div>
+
+            <!-- Razón 2 -->
+            <div class="flex flex-col text-left group">
+                <div class="relative w-full aspect-[4/3] md:aspect-[3/2] overflow-hidden rounded mb-5 bg-gray-100">
+                    <img src="./alarmas_central.webp" alt="Central de monitoreo" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                    <h3 class="absolute bottom-5 inset-x-0 text-center font-body text-xl md:text-[22px] font-bold text-white tracking-wide drop-shadow-md">Central de monitoreo</h3>
+                </div>
+                <p class="font-body text-[#333] text-center leading-relaxed text-[16px] font-medium px-2">Vigilamos su propiedad respondiendo inmediatamente.</p>
+            </div>
+
+            <!-- Razón 3 -->
+            <div class="flex flex-col text-left group">
+                <div class="relative w-full aspect-[4/3] md:aspect-[3/2] overflow-hidden rounded mb-5 bg-gray-100">
+                    <img src="./alarmas_acuda.webp" alt="Vigilantes Acuda" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                    <h3 class="absolute bottom-5 inset-x-0 text-center font-body text-xl md:text-[22px] font-bold text-white tracking-wide drop-shadow-md">Vigilantes Acuda®</h3>
+                </div>
+                <p class="font-body text-[#333] text-center leading-relaxed text-[16px] font-medium px-2">Ante una emergencia, asisten rápidamente al lugar y colaboran con las fuerzas policiales.</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Footer (Item 5) -->
+<footer id="soporte" class="bg-stone-100 dark:bg-stone-950 w-full py-12 px-8 border-t border-stone-200/10">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex flex-col items-center md:items-start gap-4">
+<div class="font-black text-stone-900 dark:text-white text-2xl tracking-tighter uppercase relative"><span class="absolute -left-2.5 -top-2 w-4 h-4 bg-[#ffd000] rounded-full mix-blend-multiply dark:mix-blend-normal"></span>Prosegur</div>
+<p class="font-['Work_Sans'] uppercase tracking-widest text-[10px] text-stone-500">© 2024 Prosegur Alarmas. La Perspectiva Sentinel Asegurada.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="font-['Work_Sans'] uppercase tracking-widest text-[10px] text-stone-500 hover:text-stone-900 dark:hover:text-white transition-all underline decoration-[#ffd000] decoration-2 underline-offset-4" href="#">Política de Privacidad</a>
+<a class="font-['Work_Sans'] uppercase tracking-widest text-[10px] text-stone-500 hover:text-stone-900 dark:hover:text-white transition-all underline decoration-[#ffd000] decoration-2 underline-offset-4" href="#">Términos de Servicio</a>
+<a class="font-['Work_Sans'] uppercase tracking-widest text-[10px] text-stone-500 hover:text-stone-900 dark:hover:text-white transition-all underline decoration-[#ffd000] decoration-2 underline-offset-4" href="#">Certificaciones</a>
+<a class="font-['Work_Sans'] uppercase tracking-widest text-[10px] text-stone-500 hover:text-stone-900 dark:hover:text-white transition-all underline decoration-[#ffd000] decoration-2 underline-offset-4" href="#">Centro de Comando</a>
+</div>
+<div class="flex gap-4">
+<button class="w-10 h-10 rounded-full flex items-center justify-center border border-stone-300 text-stone-600 hover:bg-[#ffd000] hover:border-[#ffd000] hover:text-black transition-all shadow-sm">
+<span class="material-symbols-outlined text-sm">share</span>
+</button>
+<button class="w-10 h-10 rounded-full flex items-center justify-center border border-stone-300 text-stone-600 hover:bg-[#ffd000] hover:border-[#ffd000] hover:text-black transition-all shadow-sm">
+<span class="material-symbols-outlined text-sm">support_agent</span>
+</button>
+</div>
+</div>
+<!-- Firma de Autoridad añadida -->
+<div class="max-w-7xl mx-auto mt-12 pt-10 border-t border-stone-200/50">
+    <div class="flex flex-col items-center justify-center text-center group cursor-default">
+        <p class="font-bold text-stone-800 dark:text-stone-300 tracking-[0.25em] text-sm uppercase mb-1 drop-shadow-sm group-hover:text-black transition-colors">HENRY CURTO</p>
+        <p class="text-stone-500 tracking-[0.1em] text-[11px] uppercase font-semibold leading-relaxed">
+            Especialista en Seguridad Tecnológica <br> 
+            <span class="text-[#ffd000] mt-1.5 inline-block font-black drop-shadow-md tracking-[0.15em] bg-stone-900 px-3 py-0.5 rounded text-[10px]">MARKETING Y PUBLICIDAD</span>
+        </p>
+    </div>
+</div>
+</footer>
+
+<!-- Creative WhatsApp Floating Button -->
+<a href="https://wa.me/51942866377?text=Hola,%20me%20gustar%C3%ADa%20recibir%20m%C3%A1s%20informaci%C3%B3n." 
+   target="_blank" 
+   rel="noopener noreferrer"
+   class="fixed bottom-6 right-6 z-[100] group flex items-center justify-center">
+    
+    <!-- Animación de radar pulsante detrás -->
+    <div class="absolute inset-0 bg-green-500 rounded-full animate-[ping_2s_cubic-bezier(0,0,0.2,1)_infinite] opacity-30 group-hover:opacity-60"></div>
+    <div class="absolute inset-0 bg-green-400 rounded-full animate-pulse opacity-40 group-hover:opacity-70 scale-125"></div>
+
+    <!-- Tooltip lateral -->
+    <div class="absolute right-full mr-4 bg-gradient-to-r from-gray-900 to-black text-white text-sm font-bold px-5 py-3 rounded-2xl shadow-2xl whitespace-nowrap opacity-0 translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 pointer-events-none flex items-center gap-3 border border-white/10 backdrop-blur-sm">
+        <span class="relative flex h-3 w-3">
+          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+          <span class="relative inline-flex rounded-full h-3 w-3 bg-[#25D366]"></span>
+        </span>
+        Cotiza gratis ⚡
+        <!-- Triángulo del tooltip -->
+        <div class="absolute top-1/2 -right-2 -translate-y-1/2 w-0 h-0 border-y-[8px] border-y-transparent border-l-[10px] border-l-black"></div>
+    </div>
+    
+    <!-- Botón Principal -->
+    <div class="relative flex items-center justify-center w-16 h-16 bg-gradient-to-br from-[#25D366] to-[#1DA851] text-white rounded-full shadow-[0_8px_25px_-5px_rgba(37,211,102,0.6)] group-hover:scale-110 group-hover:shadow-[0_12px_35px_-5px_rgba(37,211,102,0.8)] transition-all duration-300 ease-out border-2 border-white/30 overflow-hidden">
+        <!-- Brillo interno animado -->
+        <div class="absolute w-20 h-full bg-white/20 skew-x-[45deg] -left-32 group-hover:animate-[shine_1s_ease-out_forwards]"></div>
+        <svg class="w-9 h-9 fill-current relative z-10 drop-shadow-md group-hover:rotate-[15deg] group-hover:scale-110 transition-transform duration-300" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
+        </svg>
+    </div>
+</a>
+
+<style>
+    @keyframes shine {
+        0% { left: -150%; }
+        100% { left: 200%; }
+    }
+</style>
+</body></html>
