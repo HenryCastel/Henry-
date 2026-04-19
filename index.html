@@ -156,12 +156,12 @@
 </div>
 </section>
 <!-- Triple Security Section (Item 2) -->
-<section id="monitoreo" class="py-16 lg:py-20 bg-white">
+<section id="monitoreo" class="py-10 md:py-16 lg:py-20 bg-white">
 <div class="max-w-7xl mx-auto px-6 md:px-12 text-center">
 
-    <div class="max-w-4xl mx-auto space-y-3 mb-10 lg:mb-14">
-        <h2 class="font-headline text-4xl md:text-5xl font-extrabold text-on-surface leading-[1.15] mb-8">
-            ¿Buscas un sistema de alarma para casa? <br/>
+    <div class="max-w-4xl mx-auto space-y-3 mb-8 md:mb-10 lg:mb-14">
+        <h2 class="font-headline text-3xl md:text-4xl lg:text-5xl font-extrabold text-on-surface leading-[1.15] mb-6 md:mb-8">
+            ¿Buscas un sistema de alarma para casa? <br class="hidden md:block"/>
             <span class="text-[#ffd000] drop-shadow-sm">Acá la respuesta.</span>
         </h2>
         <p class="font-body text-xl md:text-2xl font-medium tracking-tight text-black">Tu prioridad y la nuestra es la seguridad de tu casa, y tu tranquilidad en todo momento.</p>
@@ -169,7 +169,7 @@
     </div>
 
     <!-- The Image grouping the 3 photos -->
-    <div class="mb-10 w-full max-w-6xl mx-auto">
+    <div class="mb-8 md:mb-10 w-full max-w-6xl mx-auto">
         <img alt="Triple seguridad con Monitoreo, Teclado Inteligente, y Sensores" class="w-full h-auto object-cover rounded-xl" src="TresImageses.png"/>
     </div>
 
@@ -195,7 +195,7 @@
 </div>
 </section>
 <!-- Quotation Wizard Section (Item 3) -->
-<section id="empresas" class="py-16 lg:py-24 relative overflow-hidden bg-[#111214] border-t border-white/5">
+<section id="empresas" class="py-10 md:py-16 lg:py-24 relative overflow-hidden bg-[#111214] border-t border-white/5">
     <!-- Elementos Creativos de Fondo -->
     <div class="absolute inset-0 z-0 pointer-events-none">
         <div class="absolute -top-[30%] -right-[10%] w-[60%] h-[60%] bg-[#ffd000]/15 blur-[120px] rounded-full mix-blend-screen"></div>
@@ -382,11 +382,11 @@
 </section>
 <!-- Alarm Types Gallery (Item 4) -->
 <!-- Interactive 3D Map Section (Item 4) -->
-<section id="sistemas" class="py-16 lg:py-20 bg-white relative overflow-hidden">
+<section id="sistemas" class="py-10 md:py-16 lg:py-20 bg-white relative overflow-hidden">
     <div class="max-w-7xl mx-auto px-6 md:px-12">
-        <div class="text-center max-w-4xl mx-auto mb-10 lg:mb-14">
-            <h2 class="font-headline text-3xl md:text-[42px] leading-tight font-extrabold mb-6 text-black tracking-tight">¿Cómo funciona nuestro <br class="hidden md:block" />sistema de alarma?</h2>
-            <p class="font-body text-lg md:text-xl text-gray-700 font-medium">Detectamos, alertamos, protegemos: nuestra alarma está conectada a una Central de Monitoreo 24/7 y ante una intrusión se activa el protocolo dando aviso a la policía.</p>
+        <div class="text-center max-w-4xl mx-auto mb-8 md:mb-10 lg:mb-14">
+            <h2 class="font-headline text-3xl md:text-[42px] leading-tight font-extrabold mb-4 md:mb-6 text-black tracking-tight">¿Cómo funciona nuestro <br class="hidden md:block" />sistema de alarma?</h2>
+            <p class="font-body text-[17px] md:text-xl text-gray-700 font-medium">Detectamos, alertamos, protegemos: nuestra alarma está conectada a una Central de Monitoreo 24/7 y ante una intrusión se activa el protocolo dando aviso a la policía.</p>
         </div>
         
         <!-- Contenedor Mapa 3D Interactivo -->
@@ -561,12 +561,12 @@
 </section>
 
 <!-- Protocolo de Actuación (NUEVA SECCIÓN) -->
-<section id="protocolo" class="py-16 lg:py-20 bg-stone-50 border-t border-stone-200 relative overflow-hidden">
+<section id="protocolo" class="py-10 md:py-16 lg:py-20 bg-stone-50 border-t border-stone-200 relative overflow-hidden">
     <div class="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
         
-        <div class="text-center max-w-4xl mx-auto mb-10 lg:mb-14">
-            <h2 class="font-headline text-3xl md:text-[42px] leading-tight font-extrabold mb-6 text-black tracking-tight">Detectamos, alertamos, protegemos.</h2>
-            <p class="font-body text-lg md:text-xl text-gray-700 font-medium">Nuestra alarma está conectada a una Central de Monitoreo 24/7 y ante una intrusión se activa el protocolo dando aviso a la policía.</p>
+        <div class="text-center max-w-4xl mx-auto mb-8 md:mb-10 lg:mb-14">
+            <h2 class="font-headline text-3xl md:text-[42px] leading-tight font-extrabold mb-4 md:mb-6 text-black tracking-tight">Detectamos, alertamos, protegemos.</h2>
+            <p class="font-body text-[17px] md:text-xl text-gray-700 font-medium">Nuestra alarma está conectada a una Central de Monitoreo 24/7 y ante una intrusión se activa el protocolo dando aviso a la policía.</p>
         </div>
 
         <!-- Imagen del Kit -->
@@ -580,7 +580,7 @@
             <div class="hidden md:block absolute top-[48px] lg:top-[56px] left-[15%] right-[15%] h-1 bg-stone-200 z-0"></div>
             
             <!-- Contenedor general: Carrusel en móvil, Grid en Desktop -->
-            <div class="flex overflow-x-auto snap-x snap-mandatory scrollbar-hide md:grid md:grid-cols-4 gap-4 md:gap-6 lg:gap-8 text-center pb-6 md:pb-0 px-0 scroll-smooth">
+            <div id="protocolo-carousel" onscroll="updateDots('protocolo-carousel', 'protocolo-dots')" class="flex overflow-x-auto snap-x snap-mandatory scrollbar-hide md:grid md:grid-cols-4 gap-4 md:gap-6 lg:gap-8 text-center pb-6 md:pb-0 px-0 scroll-smooth">
                 
                 <!-- Paso 1 -->
                 <div class="snap-center w-full min-w-[100%] md:min-w-0 md:w-auto shrink-0 flex flex-col items-center relative group">
@@ -652,11 +652,11 @@
             </div>
             
             <!-- Dots Mobile Simulation -->
-            <div class="md:hidden flex justify-center items-center gap-3 mt-8 pb-4">
-                <span class="w-2.5 h-2.5 rounded-full bg-[#ffd000]"></span>
-                <span class="w-2.5 h-2.5 rounded-full bg-stone-300"></span>
-                <span class="w-2.5 h-2.5 rounded-full bg-stone-300"></span>
-                <span class="w-2.5 h-2.5 rounded-full bg-stone-300"></span>
+            <div id="protocolo-dots" class="md:hidden flex justify-center items-center gap-3 mt-8 pb-4">
+                <span class="w-2.5 h-2.5 rounded-full bg-[#ffd000] transition-colors duration-300"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-stone-300 transition-colors duration-300"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-stone-300 transition-colors duration-300"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-stone-300 transition-colors duration-300"></span>
             </div>
             <p class="md:hidden text-center text-[10px] text-stone-400 font-bold tracking-widest uppercase -mt-2 animate-pulse">Desliza <span class="material-symbols-outlined align-middle text-[14px]">swipe</span></p>
 
@@ -666,12 +666,12 @@
 </section>
 
 <!-- Anti-Inhibición (NUEVA SECCIÓN) -->
-<section id="anti-inhibicion" class="py-16 lg:py-20 bg-white relative overflow-hidden border-t border-stone-200">
+<section id="anti-inhibicion" class="py-10 md:py-16 lg:py-20 bg-white relative overflow-hidden border-t border-stone-200">
     <div class="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
         
         <!-- Texto Introductorio -->
-        <div class="text-center max-w-5xl mx-auto mb-12 lg:mb-16">
-            <h2 class="font-headline text-3xl md:text-[42px] leading-tight font-extrabold mb-8 text-black tracking-tight">Tu alarma protegida de inhibiciones de señal</h2>
+        <div class="text-center max-w-5xl mx-auto mb-8 md:mb-12 lg:mb-16">
+            <h2 class="font-headline text-3xl md:text-[42px] leading-tight font-extrabold mb-4 md:mb-8 text-black tracking-tight">Tu alarma protegida de inhibiciones de señal</h2>
             <p class="font-body text-[17px] md:text-xl text-gray-600 font-medium leading-relaxed mb-6">Los inhibidores de frecuencia pueden afectar a la red móvil, al WiFi, a radares o al GPS, sin embargo, tu tranquilidad estará asegurada porque nuestra alarma dispone de una <strong class="text-black font-extrabold bg-[#ffd000]/10 px-1 py-0.5 rounded border-b-2 border-[#ffd000]">doble vía de comunicación: una línea GPRS y otra línea IP</strong>.</p>
             <p class="font-body text-[17px] md:text-xl text-gray-600 font-medium leading-relaxed">Si se produce una inhibición de la línea GPRS la alarma seguirá funcionando ya que la señal de la alarma se enviará a través de la línea IP, pudiendo enviar imágenes para verificar la incidencia y avisar a la Policía si es necesario.</p>
         </div>
@@ -681,7 +681,7 @@
             <!-- Linea conectora de fondo (visible solo en escritorio) -->
             <div class="hidden md:block absolute top-[48px] lg:top-[56px] left-[15%] right-[15%] h-1 bg-stone-200 z-0"></div>
             
-            <div class="flex overflow-x-auto snap-x snap-mandatory scrollbar-hide md:grid md:grid-cols-4 gap-4 md:gap-6 lg:gap-8 text-center pb-6 md:pb-0 px-0 scroll-smooth">
+            <div id="anti-inhibicion-carousel" onscroll="updateDots('anti-inhibicion-carousel', 'anti-inhibicion-dots')" class="flex overflow-x-auto snap-x snap-mandatory scrollbar-hide md:grid md:grid-cols-4 gap-4 md:gap-6 lg:gap-8 text-center pb-6 md:pb-0 px-0 scroll-smooth">
                 
                 <!-- Step 1: Salto de Alarma -->
                 <div class="snap-center w-full min-w-[100%] md:min-w-0 md:w-auto shrink-0 flex flex-col items-center relative group">
@@ -754,11 +754,11 @@
             </div>
             
             <!-- Dots Mobile Simulation -->
-            <div class="md:hidden flex justify-center items-center gap-3 mt-8 pb-4">
-                <span class="w-2.5 h-2.5 rounded-full bg-[#ffd000]"></span>
-                <span class="w-2.5 h-2.5 rounded-full bg-stone-300"></span>
-                <span class="w-2.5 h-2.5 rounded-full bg-stone-300"></span>
-                <span class="w-2.5 h-2.5 rounded-full bg-stone-300"></span>
+            <div id="anti-inhibicion-dots" class="md:hidden flex justify-center items-center gap-3 mt-8 pb-4">
+                <span class="w-2.5 h-2.5 rounded-full bg-[#ffd000] transition-colors duration-300"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-stone-300 transition-colors duration-300"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-stone-300 transition-colors duration-300"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-stone-300 transition-colors duration-300"></span>
             </div>
             <p class="md:hidden text-center text-[10px] text-stone-400 font-bold tracking-widest uppercase -mt-2 animate-pulse">Desliza <span class="material-symbols-outlined align-middle text-[14px]">swipe</span></p>
 
@@ -768,11 +768,11 @@
 </section>
 
 <!-- Razones para elegirnos -->
-<section id="razones-prosegur" class="py-16 lg:py-20 bg-white border-t border-stone-200">
+<section id="razones-prosegur" class="py-10 md:py-16 lg:py-20 bg-white border-t border-stone-200">
     <div class="max-w-7xl mx-auto px-6 md:px-12 text-center">
         
-        <div class="mb-10 lg:mb-12 max-w-4xl mx-auto">
-            <h2 class="font-headline text-3xl md:text-[40px] leading-tight font-extrabold text-[#1a1c1c] mb-6 tracking-tight">Razones para elegirnos</h2>
+        <div class="mb-8 md:mb-10 lg:mb-12 max-w-4xl mx-auto">
+            <h2 class="font-headline text-3xl md:text-[40px] leading-tight font-extrabold text-[#1a1c1c] mb-4 md:mb-6 tracking-tight">Razones para elegirnos</h2>
             <p class="font-body text-[17px] md:text-xl text-[#333] font-medium leading-relaxed">Existen muchas razones para elegir el sistema de Prosegur Alarmas para tu hogar o tu negocio. Estas son las que nos distinguen.</p>
         </div>
 
@@ -813,30 +813,16 @@
 </section>
 
 <!-- Footer (Item 5) -->
-<footer id="soporte" class="bg-stone-100 dark:bg-stone-950 w-full py-12 px-8 border-t border-stone-200/10">
-<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
-<div class="flex flex-col items-center md:items-start gap-4">
-<div class="font-black text-stone-900 dark:text-white text-2xl tracking-tighter uppercase relative"><span class="absolute -left-2.5 -top-2 w-4 h-4 bg-[#ffd000] rounded-full mix-blend-multiply dark:mix-blend-normal"></span>Prosegur</div>
-<p class="font-['Work_Sans'] uppercase tracking-widest text-[10px] text-stone-500">© 2024 Prosegur Alarmas. La Perspectiva Sentinel Asegurada.</p>
-</div>
-<div class="flex flex-wrap justify-center gap-8">
-<a class="font-['Work_Sans'] uppercase tracking-widest text-[10px] text-stone-500 hover:text-stone-900 dark:hover:text-white transition-all underline decoration-[#ffd000] decoration-2 underline-offset-4" href="#">Política de Privacidad</a>
-<a class="font-['Work_Sans'] uppercase tracking-widest text-[10px] text-stone-500 hover:text-stone-900 dark:hover:text-white transition-all underline decoration-[#ffd000] decoration-2 underline-offset-4" href="#">Términos de Servicio</a>
-<a class="font-['Work_Sans'] uppercase tracking-widest text-[10px] text-stone-500 hover:text-stone-900 dark:hover:text-white transition-all underline decoration-[#ffd000] decoration-2 underline-offset-4" href="#">Certificaciones</a>
-<a class="font-['Work_Sans'] uppercase tracking-widest text-[10px] text-stone-500 hover:text-stone-900 dark:hover:text-white transition-all underline decoration-[#ffd000] decoration-2 underline-offset-4" href="#">Centro de Comando</a>
-</div>
-<div class="flex gap-4">
-<button class="w-10 h-10 rounded-full flex items-center justify-center border border-stone-300 text-stone-600 hover:bg-[#ffd000] hover:border-[#ffd000] hover:text-black transition-all shadow-sm">
-<span class="material-symbols-outlined text-sm">share</span>
-</button>
-<button class="w-10 h-10 rounded-full flex items-center justify-center border border-stone-300 text-stone-600 hover:bg-[#ffd000] hover:border-[#ffd000] hover:text-black transition-all shadow-sm">
-<span class="material-symbols-outlined text-sm">support_agent</span>
-</button>
-</div>
-</div>
-<!-- Firma de Autoridad añadida -->
-<div class="max-w-7xl mx-auto mt-12 pt-10 border-t border-stone-200/50">
+<footer id="soporte" class="bg-stone-100 dark:bg-stone-950 w-full py-12 md:py-16 px-8 border-t border-stone-200/10">
+<div class="max-w-7xl mx-auto flex flex-col items-center justify-center gap-12">
+    <!-- Custom Prosegur Centered Logo -->
+    <div class="font-black text-stone-900 dark:text-white text-3xl tracking-tighter uppercase relative">
+        <span class="absolute -left-3 -top-2 w-5 h-5 bg-[#ffd000] rounded-full mix-blend-multiply dark:mix-blend-normal"></span>Prosegur
+    </div>
+    
+    <!-- Firma de Autoridad añadida -->
     <div class="flex flex-col items-center justify-center text-center group cursor-default">
+        <p class="text-[10px] text-stone-400 tracking-[0.2em] font-medium uppercase mb-2">Desarrollado por</p>
         <p class="font-bold text-stone-800 dark:text-stone-300 tracking-[0.25em] text-sm uppercase mb-1 drop-shadow-sm group-hover:text-black transition-colors">HENRY CURTO</p>
         <p class="text-stone-500 tracking-[0.1em] text-[11px] uppercase font-semibold leading-relaxed">
             Especialista en Seguridad Tecnológica <br> 
@@ -883,4 +869,22 @@
         100% { left: 200%; }
     }
 </style>
+
+<script>
+    function updateDots(carouselId, dotsContainerId) {
+        const carousel = document.getElementById(carouselId);
+        const dots = document.getElementById(dotsContainerId).children;
+        if (!carousel || !dots.length) return;
+        
+        const maxScrollLeft = carousel.scrollWidth - carousel.clientWidth;
+        if (maxScrollLeft <= 0) return;
+        
+        let index = Math.round((carousel.scrollLeft / maxScrollLeft) * (dots.length - 1));
+        
+        for(let i = 0; i < dots.length; i++) {
+            dots[i].classList.remove('bg-[#ffd000]', 'bg-stone-300');
+            dots[i].classList.add(i === index ? 'bg-[#ffd000]' : 'bg-stone-300');
+        }
+    }
+</script>
 </body></html>
